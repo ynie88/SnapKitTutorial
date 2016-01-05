@@ -17,11 +17,11 @@
                         <rect key="frame" x="95" y="42" width="182" height="207"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evd-XK-UE1">
-                        <rect key="frame" x="163" y="254" width="46" height="30"/>
+                        <rect key="frame" x="139" y="254" width="94" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="46" id="kSh-e2-1sr"/>
+                            <constraint firstAttribute="width" constant="94" id="kSh-e2-1sr"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Click Me!"/>
                         <connections>
                             <action selector="buttonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="QFS-0B-zbn"/>
                         </connections>
