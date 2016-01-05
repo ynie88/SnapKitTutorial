@@ -25,8 +25,10 @@ class MainCollectionViewController: UICollectionViewController {
         
         collectionView?.registerClass(TimerCellRefactored.self, forCellWithReuseIdentifier: TimerCellRefactored.identifier)
         
-        let animationCell = UINib(nibName: AnimationCell.idenitifier, bundle: nil)
-        collectionView?.registerNib(animationCell, forCellWithReuseIdentifier: AnimationCell.idenitifier)
+//        let animationCell = UINib(nibName: AnimationCell.idenitifier, bundle: nil)
+//        collectionView?.registerNib(animationCell, forCellWithReuseIdentifier: AnimationCell.idenitifier)
+        
+        collectionView?.registerClass(AnimationCellRefactored.self, forCellWithReuseIdentifier: AnimationCellRefactored.identifier)
     }
 
     // MARK: UICollectionViewDataSource
@@ -47,7 +49,8 @@ class MainCollectionViewController: UICollectionViewController {
             cell.startTimer()
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(AnimationCell.idenitifier, forIndexPath: indexPath) as! AnimationCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(AnimationCellRefactored.identifier, forIndexPath: indexPath) as! AnimationCellRefactored
+            cell.setupCell()
             return cell
         }
     }
