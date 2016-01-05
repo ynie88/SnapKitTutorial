@@ -46,16 +46,6 @@ class TimerCell: UICollectionViewCell {
         timer.invalidate()
     }
     
-    func timeString(time:NSTimeInterval) -> (String, String, String) {
-        let minutes = Int(time) / 60
-        let seconds = time - Double(minutes) * 60
-        let secondsFraction = seconds - Double(Int(seconds))
-        let strMinutes = String(format: "%02i", minutes)
-        let strSeconds = String(format: ":%02i", Int(seconds))
-        let strSecondsFraction = String(format: "%.01i",Int(secondsFraction * 10.0))
-        return (strMinutes, strSeconds, strSecondsFraction)
-    }
-    
     func timerDidEnd(timer:NSTimer){
         //timerLabel.text = timer.userInfo as? String
         timeCount = timeCount - timeInterval
@@ -88,7 +78,7 @@ class TimerCell: UICollectionViewCell {
     }
     
     func setTimerLabels() {
-        let (minute, seconds, fractionSecond) = timeString(timeCount)
+        let (minute, seconds, fractionSecond) = HelperFunctions.timeString(timeCount)
         minutesLabel.text = minute
         secondsLabel.text = seconds
         microSecondsLabel.text = fractionSecond

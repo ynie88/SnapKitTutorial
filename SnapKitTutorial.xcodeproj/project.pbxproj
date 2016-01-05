@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C4C9B742AF35F95962BE0C9 /* Pods_SnapKitTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9614B692AFD65FBDF07CA2D /* Pods_SnapKitTutorial.framework */; };
+		4C07721A1C3C1D9700B803FC /* TimerCellRefactored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0772191C3C1D9700B803FC /* TimerCellRefactored.swift */; };
 		4CF53E831C3AB861002BE7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF53E821C3AB861002BE7FC /* AppDelegate.swift */; };
 		4CF53E881C3AB861002BE7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF53E861C3AB861002BE7FC /* Main.storyboard */; };
 		4CF53E8A1C3AB861002BE7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF53E891C3AB861002BE7FC /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0772191C3C1D9700B803FC /* TimerCellRefactored.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCellRefactored.swift; sourceTree = "<group>"; };
 		4CF53E7F1C3AB861002BE7FC /* SnapKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF53E821C3AB861002BE7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF53E871C3AB861002BE7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				4CF53EB71C3AF003002BE7FC /* TimerCell.xib */,
 				4CF53EB91C3B1732002BE7FC /* AnimationCell.swift */,
 				4CF53EBA1C3B1732002BE7FC /* AnimationCell.xib */,
+				4C0772191C3C1D9700B803FC /* TimerCellRefactored.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				4CF53EB11C3AC4A8002BE7FC /* MainCollectionViewController.swift in Sources */,
 				4CF53EB31C3AC790002BE7FC /* HelperFunctions.swift in Sources */,
 				4CF53EB61C3AEF6A002BE7FC /* TimerCell.swift in Sources */,
+				4C07721A1C3C1D9700B803FC /* TimerCellRefactored.swift in Sources */,
 				4CF53EBB1C3B1732002BE7FC /* AnimationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,8 +20,10 @@ class MainCollectionViewController: UICollectionViewController {
     }
     
     func registerNibs() {
-        let timerCell = UINib(nibName: TimerCell.identifier, bundle:nil)
-        collectionView?.registerNib(timerCell, forCellWithReuseIdentifier: TimerCell.identifier)
+//        let timerCell = UINib(nibName: TimerCell.identifier, bundle:nil)
+//        collectionView?.registerNib(timerCell, forCellWithReuseIdentifier: TimerCell.identifier)
+        
+        collectionView?.registerClass(TimerCellRefactored.self, forCellWithReuseIdentifier: TimerCellRefactored.identifier)
         
         let animationCell = UINib(nibName: AnimationCell.idenitifier, bundle: nil)
         collectionView?.registerNib(animationCell, forCellWithReuseIdentifier: AnimationCell.idenitifier)
@@ -41,7 +43,7 @@ class MainCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(TimerCell.identifier, forIndexPath: indexPath) as! TimerCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(TimerCellRefactored.identifier, forIndexPath: indexPath) as! TimerCellRefactored
             cell.startTimer()
             return cell
         } else {
