@@ -10,10 +10,22 @@ import UIKit
 
 class AnimationCellRefactored: UICollectionViewCell {
     static let identifier = "AnimationCellRefactored"
+    var _offset = 40
+    private var offset:Int {
+        get {
+            if _offset == 0 {
+                _offset = 40
+            } else {
+                _offset = 0
+            }
+            return _offset
+        }
+    }
     
     private lazy var button:UIButton = {
         let button                  = UIButton(frame: .zero)
         button.titleLabel?.font     = UIFont(name: "HelveticaNeue-UltraLight", size: 31.0)
+        button.setTitleColor(UIColor.blueColor(), forState: .Normal)
         button.setTitle("Press Me!", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         self.contentView.addSubview(button)
@@ -83,8 +95,7 @@ class AnimationCellRefactored: UICollectionViewCell {
     
     func buttonPressed() {
         self.button.snp_updateConstraints(closure: { (make) -> Void in
-            let offsetConstant = 40
-            make.centerX.equalTo(self.contentView).offset(offsetConstant)
+            make.centerX.equalTo(self.contentView).offset(offset)
         })
         
         UIView.animateWithDuration(1.0) { () -> Void in
